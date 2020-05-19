@@ -7,9 +7,9 @@
 #'   number of cores in your computer as it will degrade performance.
 #' @export
 #' @examples
-#' cluster <- new_cluster(2)
+#' cluster <- creat_cluster(2)
 #' cluster
-new_cluster <- function(n) {
+creat_cluster <- function(n) {
   sessions <- replicate(n, callr::r_session$new())
   structure(
     sessions,
